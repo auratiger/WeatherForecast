@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" version="2.0">
+
+    <persistence-unit name="user-unit" transaction-type="RESOURCE_LOCAL">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <class>com.WeatherForecast_new.WeatherDataModels.WeatherData</class>
+        <class>com.WeatherForecast_new.WeatherDataModels.CurrentDayDataModel</class>
+        <class>com.WeatherForecast_new.WeatherDataModels.FiveDayDataModel</class>
+        <class>com.WeatherForecast_new.WeatherDataModels.TenDayDataModel</class>
+        <class>com.WeatherForecast_new.WeatherDataModels.WeekendDataModel</class>
+        <class>com.WeatherForecast_new.WeatherDataModels.HourlyDataModel</class>
+        <class>com.WeatherForecast_new.WeatherModels.CurrentDayModel</class>
+        <class>com.WeatherForecast_new.WeatherModels.FiveDayModel</class>
+        <class>com.WeatherForecast_new.WeatherModels.TenDayModel</class>
+        <class>com.WeatherForecast_new.WeatherModels.WeekendModel</class>
+        <class>com.WeatherForecast_new.WeatherModels.HourlyModel</class>
+        <class>com.WeatherForecast_new.WeatherModels.ForecastModel</class>
+        <class>com.WeatherForecast_new.WeatherDataModels.HourlyWeatherData</class>
+        <properties>
+            <property name="hibernate.jdbc.time_zone" value="UTC"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost/test" />
+            <property name="javax.persistence.jdbc.user" value="root" />
+            <property name="javax.persistence.jdbc.password" value="MysqlTest" />
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+        </properties>
+    </persistence-unit>
+</persistence>
